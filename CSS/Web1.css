@@ -96,6 +96,45 @@ nav a.active {
     border-bottom: 0.5rem solid #4b52b7;
   }
 }
+.dropbtn {
+  padding:10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute    ;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  margin: auto;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  rgba(255, 255, 255, 0.1);
+}
 section {
   min-height: 100vh;
   padding: 5rem 9% 5rem;
@@ -271,7 +310,7 @@ span {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -334,24 +373,6 @@ footer {
 .php {
   width: 50%;
   background-color: #808080;
-}
-.pipas {
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.pipas img {
-  border-radius: 50px;
-  box-shadow: 0 0 40px bisque;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pipas img:hover {
-  position: relative;
-  box-shadow: 0 0 40px bisque;
-  transform: scale(1.1);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sajajar {
