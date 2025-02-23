@@ -1,0 +1,55 @@
+body {
+    background-color: #161616;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  /* border-radius: 50px; */
+  padding-inline: 1rem 9%;
+  background-color: #161616;
+  z-index: 50;
+}
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active {
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+
+main {  
+  background-color: rgb(156, 126, 126);
+  padding: 130px;
+  margin: 100px;
+  padding-top: 50px;
+  border-radius: 50px;
+}
+.nongkrong {
+  display: flex;
+  justify-content: center;
+  
+}
+.nongkrong img {
+  border-radius: 50px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  main {  
+    padding: 20px;
+    margin: 10px;
+    padding-top: 120px;
+  }
+}
