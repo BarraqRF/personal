@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Jejak Karbon</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="d-flex align-items-center justify-content-center vh-100">
+    <div class="container text-center">
+      <h1 class="mb-4">Kalkulator Jejak Karbon</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="carbonCalculator">
+            <div class="form-group">
+              <label for="fuelConsumption"
+                >Konsumsi Bahan Bakar (liter/bulan):</label
+              >
+              <input
+                type="number"
+                class="form-control text-center"
+                id="fuelConsumption"
+                placeholder="Masukkan konsumsi bahan bakar"
+              />
+            </div>
+            <div class="form-group">
+              <label for="electricityUsage">Penggunaan Listrik (kWh/bulan):</label>
+              <input
+                type="number"
+                class="form-control text-center"
+                id="electricityUsage"
+                placeholder="Masukkan penggunaan listrik"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              onclick="calculateCarbonFootprint()"
+            >
+              Hitung Jejak Karbon
+            </button>
+          </form>
+          <h3 class="mt-4" id="result"></h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculateCarbonFootprint() {
+        const fuelConsumption =
+          parseFloat(document.getElementById("fuelConsumption").value) || 0;
+        const electricityUsage =
+          parseFloat(document.getElementById("electricityUsage").value) || 0;
+
+        const fuelEmissionFactor = 2.31;
+        const electricityEmissionFactor = 0.5;
+
+        const fuelCarbon = fuelConsumption * fuelEmissionFactor;
+        const electricityCarbon = electricityUsage * electricityEmissionFactor;
+
+        const totalCarbon = fuelCarbon + electricityCarbon;
+
+        document.getElementById(
+          "result"
+        ).innerText = `Total Jejak Karbon Anda: ${totalCarbon.toFixed(
+          2
+        )} kg CO2/bulan`;
+      }
+    </script>
+  </body>
+</html>
